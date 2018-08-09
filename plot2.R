@@ -16,6 +16,9 @@ data$Time <- strptime(data$Time, format = "%H:%M:%S")
 # (2007-02-01 - 2007-02-02)
 myDF <- subset(data, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
+# removing data we don't need
+rm(data)
+
 # creating PNG file
 png('plot2.png')
 
