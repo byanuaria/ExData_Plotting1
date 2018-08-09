@@ -1,3 +1,4 @@
+
 # loading packages
 library(tidyverse)
 
@@ -15,6 +16,9 @@ data$Time <- strptime(data$Time, format = "%H:%M:%S")
 # subset data for two day period in February, 2007
 # (2007-02-01 - 2007-02-02)
 myDF <- subset(data, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
+
+# removing data we don't need
+rm(data)
 
 # create PNG file
 png('plot3.png')
